@@ -2,13 +2,17 @@
 <html>
     <head>
         <title>Movie History</title>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body ng-app="MovieHistory">
 
-        <!-- ANGULAR SET UP TEST -->
-        <div ng-include="'./partials/test.html'"></div>
+        <!-- NAVBAR INCLUDE -->
+        <div ng-include="'./partials/nav-bar.html'"></div>
+        
+        <!-- ROUTING DESIGNED IN APP.JS -->
+        <div ng-view></div>
 
         <!-- LIBRARIES -->
         <script type="text/javascript" src="lib/node_modules/jquery/dist/jquery.min.js"></script>
@@ -17,5 +21,7 @@
 
         <!-- OUR FILES -->
         <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/controllers/AuthCTRL.js"></script>
+        <script type="text/javascript" src="js/controllers/MoviesCTRL.js"></script>
     </body>
 </html>
