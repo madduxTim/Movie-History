@@ -1,0 +1,1 @@
+{"/Users/timmaddux/workspace/group-projects/Movie-History/lib/gulpfile.js":{"sha1":"0304543f44f7d26d963c8738ba0ba4d605212262","tasks":{"default":{"name":"default","dependencies":"watch lint sassify"},"watch":{"name":"watch","dependencies":""},"lint":{"name":"lint","dependencies":""},"sassify":{"name":"sassify","dependencies":""}}}}
