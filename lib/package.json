@@ -1,0 +1,27 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "angular-route": "^1.5.6",
+    "firebase": "^3.0.3",
+    "angular": "^1.5.6",
+    "gulp-sass": "^2.3.1",
+    "jquery": "^2.2.4",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
+    "sass": "^0.5.0",
+    "watchify": "^3.7.0",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-watch": "^4.3.6",
+    "angularfire": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
