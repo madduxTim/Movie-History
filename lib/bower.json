@@ -1,0 +1,23 @@
+{
+  "name": "lib",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "complikatyed <katye.russell@gmail.com>",
+    "madduxTim <timothymaddux@gmail.com>",
+    "csbarrett1 <c.barrett@me.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/madduxTim/Movie-History",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularfire": "^2.0.0",
+    "firebase": "^3.0.3"
+  }
+}
