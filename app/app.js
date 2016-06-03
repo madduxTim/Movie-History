@@ -9,9 +9,9 @@ app.config(function($routeProvider){
             templateUrl: "partials/movie-history.html",
             controller: "MoviesCTRL"
         }).
-        when("/main", {
-            templateUrl: "partials/movie-history.html",
-            controller: "MoviesCTRL"
+        when("/list", {
+            templateUrl: "partials/movie-list-area.html",
+            controller: "WatchNewController"
         }).
         when("/login", {
             templateUrl: "partials/login.html",
