@@ -1,3 +1,5 @@
+'use strict';
+
 app.controller("AuthCTRL", function($scope){
     
 
