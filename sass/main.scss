@@ -1,7 +1,7 @@
-$funkytown: #E3E3E3;
+$dark: #596160;
 
 body {
-    background-color: $funkytown;
+    background-color: #EAEAEA;
 }
 
 .spacer {
@@ -10,4 +10,19 @@ body {
 
 form {
   margin-top: 20px;
+}
+
+.logo {
+  font-weight: 600;
+  color: red;
+}
+
+.card_border_radius {
+  border-radius: 10px;
+  background-color: white;
+  width: 500px;
+}
+
+.lightblue {
+  background-color: #73AAE2;
 }
