@@ -1,3 +1,5 @@
+'use strict';
+
 app.controller("MoviesCTRL", function($scope){
     console.log("MoviesCTRL working");
     $scope.btnWorking = () => {

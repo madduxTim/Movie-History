@@ -23,9 +23,9 @@ app.controller("AuthCTRL", function($scope, $rootScope, $location, firebaseURL, 
       password: $scope.account.password
     }, (error, userData) => {
       if(error){
-        console.log(`Error creating user: ${error}`)
+        console.log(`Error creating user: ${error}`);
       } else{
-        console.log(`Created user account with uid: ${userData.uid}`)
+        console.log(`Created user account with uid: ${userData.uid}`);
         $scope.login();
       }
     });
@@ -41,16 +41,7 @@ app.controller("AuthCTRL", function($scope, $rootScope, $location, firebaseURL, 
         $rootScope.isActive = true;
         $location.path("/");
         $scope.$apply();
-      })
-
-
-
-
-
-
-
-
-
+      });
   };
 
-})
+});
