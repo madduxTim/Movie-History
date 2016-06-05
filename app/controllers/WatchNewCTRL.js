@@ -15,6 +15,8 @@ app.controller('WatchNewController', function($scope, $location, watchListStorag
     // Still need to figure out how to get the value of the title text for that div
     // It ought to work something like the wysiwyg exercise,
     // but not sure about impact of Angular on methods here...
+    var myTitle = thingy.find("title");
+    console.log(myTitle);
   }
 
   $scope.addToWatchList = function(){
