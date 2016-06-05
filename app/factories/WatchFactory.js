@@ -3,7 +3,6 @@
 app.factory("watchListStorage", function($q, $http, firebaseURL) {
 
   var postNewWatchMovie = function(newWatchMovie) {
-    console.log("Trying to post stuff!");
 
     return $q(function(resolve, reject) {
       $http
@@ -25,3 +24,4 @@ app.factory("watchListStorage", function($q, $http, firebaseURL) {
   return {postNewWatchMovie:postNewWatchMovie};
 
 });
+
