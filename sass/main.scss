@@ -1,11 +1,22 @@
 $dark: #596160;
 
 body {
-    background-color: #EAEAEA;
+    background-color: #2B2B2B;
 }
 
-.spacer {
-  height: 200px;
+.loginbg {
+    background: url(https://www.punchbowl.com/gridfs/fs/4db1dcafec8d837cee000282-1303502001) no-repeat center center fixed; 
+    background-size: 110%;
+    padding-bottom: 500px;
+}
+  
+.header {
+  height: 75px;
+}
+
+.searchmodal {
+  background-color: #ECECEC;
+  border-radius: 5px;
 }
 
 form {
@@ -14,15 +25,32 @@ form {
 
 .logo {
   font-weight: 600;
-  color: red;
+  position: absolute;
+  color: #DB0000;
+  display: inline-block;
+  font-size: 3.1rem;
+  text-shadow: 0px 0px 10px #000;
+  padding: 0;
+  margin-left: 10px;
+  white-space: nowrap;
 }
 
 .card_border_radius {
-  border-radius: 10px;
-  background-color: white;
-  width: 500px;
+  border-radius: 5px;
+  background-color: #ECECEC;
 }
 
 .lightblue {
   background-color: #73AAE2;
+}
+
+.signin {
+  text-align: center;
+  margin-bottom: -20px;
+  padding-top: 20px;
+}
+
+.search {
+  height: 100px;
+  background-color: white;
 }
