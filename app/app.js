@@ -27,24 +27,24 @@ app.config(function($routeProvider){
         when("/login", {
             templateUrl: "partials/login.html",
             controller: "AuthCTRL",
-            resolve: {isAuth}
+            resolve: !{isAuth}
         }).
-        when('/logout', {
-        templateUrl: 'partials/login.html',
+        when("/logout", {
+        templateUrl: "partials/login.html",
         controller: "AuthCTRL"
       }).
         // when("/", {
         //     templateUrl: "partials/",
         //     controller: ""
         // }).
-        otherwise("/");
+      otherwise("/");
 });
 
-app.run(($location) =>{
+app.run(($location) => {
   let movieRef = new Firebase("https://groovymoviehistory.firebaseio.com/");
 
-  movieRef.onAuth(authData =>{
-    if(!authData){
+  movieRef.onAuth(authData => {
+    if(!authData) {
       $location.path("/login");
     }
   });
