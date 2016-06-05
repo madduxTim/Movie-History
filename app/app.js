@@ -16,15 +16,18 @@ app.config(function($routeProvider){
     $routeProvider.
         when("/", {
             templateUrl: "partials/movie-history.html",
-            controller: "MoviesCTRL"
+            controller: "MoviesCTRL",
+            resolve: {isAuth}
         }).
         when("/list", {
             templateUrl: "partials/movie-list-area.html",
-            controller: "WatchNewController"
+            controller: "WatchNewController",
+            resolve: {isAuth}
         }).
         when("/login", {
             templateUrl: "partials/login.html",
-            controller: "AuthCTRL"
+            controller: "AuthCTRL",
+            resolve: {isAuth}
         }).
         when('/logout', {
         templateUrl: 'partials/login.html',
