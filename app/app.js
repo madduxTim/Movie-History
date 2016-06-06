@@ -19,9 +19,14 @@ app.config(function($routeProvider){
             controller: "MoviesCTRL",
             resolve: {isAuth}
         }).
-        when("/list", {
+        when("/new", {
             templateUrl: "partials/movie-list-area.html",
-            controller: "WatchNewController",
+            controller: "ChosenNewCtrl",
+            resolve: {isAuth}
+        }).
+        when("/list", {
+            templateUrl: "partials/chosen-list-area.html",
+            controller: "ChosenListCtrl",
             resolve: {isAuth}
         }).
         when("/login", {
