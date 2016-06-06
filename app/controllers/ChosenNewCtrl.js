@@ -1,11 +1,12 @@
 'use strict';
 
-app.controller('WatchNewController', function($scope, $location, watchListStorage) {
+app.controller("ChosenNewController", function($scope, $location, chosenStorage) {
 
-  $scope.newWatchMovie = {
+  $scope.newChosenMovie = {
     title: "",
     year: "",
-    rating: "",
+    rating: 0,
+    poster: "",
     uid: ""
   };
 
@@ -21,7 +22,7 @@ app.controller('WatchNewController', function($scope, $location, watchListStorag
 
   $scope.addToWatchList = function(){
     console.log("You clicked me");
-    watchListStorage.postNewWatchMovie($scope.newWatchMovie)
+    chosenStorage.postNewChosenMovie($scope.newChosenMovie)
       .then(function successCallback(response) {
         $location.url("/");
       });

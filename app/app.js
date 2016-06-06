@@ -4,10 +4,8 @@ var app = angular.module("MovieHistory", ["ngRoute"])
 
 let isAuth = (AuthFactory) => new Promise ((resolve, reject) => {
   if(AuthFactory.isAuthenticated()){
-    console.log("User is authenticated, resolve route promise");
     resolve();
   } else {
-    console.log("User is not authenticated, reject route promise");
     reject();
   }
 })
@@ -19,9 +17,14 @@ app.config(function($routeProvider){
             controller: "MoviesCTRL",
             resolve: {isAuth}
         }).
-        when("/list", {
+        when("/new", {
             templateUrl: "partials/movie-list-area.html",
-            controller: "WatchNewController",
+            controller: "ChosenNewCtrl",
+            resolve: {isAuth}
+        }).
+        when("/list", {
+            templateUrl: "partials/chosen-list-area.html",
+            controller: "ChosenListCtrl",
             resolve: {isAuth}
         }).
         when("/login", {
