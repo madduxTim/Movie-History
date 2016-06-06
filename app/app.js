@@ -1,5 +1,4 @@
 var app = angular.module("MovieHistory", ["ngRoute"])
-  .constant("OMDBurl", "http://www.omdbapi.com/?s=Star&y=&plot=short&r=json")
   .constant("firebaseURL", "https://groovymoviehistory.firebaseio.com/")
 
 let isAuth = (AuthFactory) => new Promise ((resolve, reject) => {
