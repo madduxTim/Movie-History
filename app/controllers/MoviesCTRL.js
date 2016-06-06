@@ -1,8 +1,13 @@
-'use strict';
+"use strict";
+app.controller("MoviesCTRL", function($scope, movieQueryStore){
+    $scope.queryStorage = [];
+    movieQueryStore.getSearchMovies()
+        .then(function(queryResults){
+            $scope.queryStorage = queryResults[0];
+            console.log($scope.queryStorage[0]);
+    });
 
-app.controller("MoviesCTRL", function($scope){
-
-  $scope.btnWorking = () => {
-      console.log("the button you pressed totally works");
-  };
+    $scope.addToWatchList = () => {
+        console.log("working");
+    }
 });
