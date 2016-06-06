@@ -4,10 +4,8 @@ var app = angular.module("MovieHistory", ["ngRoute"])
 
 let isAuth = (AuthFactory) => new Promise ((resolve, reject) => {
   if(AuthFactory.isAuthenticated()){
-    console.log("User is authenticated, resolve route promise");
     resolve();
   } else {
-    console.log("User is not authenticated, reject route promise");
     reject();
   }
 })

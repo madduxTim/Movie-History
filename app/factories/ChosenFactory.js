@@ -26,16 +26,15 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
   };
 
   var getChosenMovieList = function() {
-    console.log("Getting list");
+
     let chosenMovies = [];
-    //let user = AuthFactory.getUser();
+    let user = AuthFactory.getUser();
 
     return $q(function(resolve, reject) {
       $http
-        .get(firebaseURL + "movies.json")
+        .get(`${firebaseURL}movies.json?orderBy="uid"&equalTo="${user.uid}"`)
         .success(function(chosenMovieObject){
           var chosenMovieCollection = chosenMovieObject;
-          console.log(chosenMovieCollection);
           Object.keys(chosenMovieCollection).forEach(function(key){
             chosenMovieCollection[key].id=key;
             chosenMovies.push(chosenMovieCollection[key]);

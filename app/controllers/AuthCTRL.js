@@ -17,7 +17,6 @@ app.controller("AuthCTRL", function($scope, $rootScope, $location, firebaseURL, 
   }
 
   $scope.register = () => {
-    console.log("you clicked register");
     ref.createUser({
       email: $scope.account.email,
       password: $scope.account.password
@@ -25,7 +24,6 @@ app.controller("AuthCTRL", function($scope, $rootScope, $location, firebaseURL, 
       if(error){
         console.log(`Error creating user: ${error}`);
       } else{
-        console.log(`Created user account with uid: ${userData.uid}`);
         $scope.login();
       }
     });
@@ -33,7 +31,6 @@ app.controller("AuthCTRL", function($scope, $rootScope, $location, firebaseURL, 
 
 
   $scope.login = () => {
-    console.log("you clicked login");
     AuthFactory
       .authenticate($scope.account)
       .then(() => {
