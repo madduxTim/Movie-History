@@ -44,5 +44,9 @@ body {
 .star-rated {
   color: #D20000; }
 
+.cardheight {
+  min-height: 562px;
+  min-width: 200px; }
+
 .star-not-rated {
   color: #E6E6E6; }
