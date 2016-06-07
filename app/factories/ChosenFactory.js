@@ -74,7 +74,7 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
   var deleteChosenMovie = function(chosenMovieId){
     return $q(function(resolve, reject){
       $http
-        .delete(firebaseURL + "movies/" + chosenMovieId + ".json")
+        .delete(firebaseURL + `/movies/${chosenMovieId}.json`)
         .success(function(objectFromFirebase){
           resolve(objectFromFirebase);
         })

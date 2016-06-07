@@ -17,7 +17,7 @@
                   <form>
                     <label>Please rate this movie:</label>
                     <span><input type="number" size="3" min="1" max="5"ng-model="chosenMovie.rating"/><i class="material-icons tiny teal-text right hoverable" ng-click="rankMovie(chosenMovie)">stars</i></span>
-                    <i class="material-icons tiny teal-text right hoverable" ng-click="deleteMovie(chosenMovie.id)">delete</i>
+                    <i class="material-icons tiny teal-text right hoverable" ng-click="deleteMovie(chosenMovie.id, chosenMovie.title)">delete</i>
                   </form>
               </div>
               <div class="card-reveal">
