@@ -11,16 +11,26 @@
                 <img class="activator width" ng-src={{chosenMovie.poster}}>
               </div>
               <div class="card-content">
-                <span class="activator grey-text text-darken-4">{{chosenMovie.title}}<i class="material-icons right">more_vert</i></span>
+                <span class="activator grey-text text-darken-4">{{chosenMovie.title}}<i class="fa fa-times right" aria-hidden="true"></i></span>
                 <p class="year">{{chosenMovie.year}}</p>
                 <!-- <div class="rating">Rating: {{chosenMovie.rating}}</div> -->
-                <div>
-                  <i class="fa fa-star star-rated" aria-hidden="true"></i>
-                  <i class="fa fa-star star-rated" aria-hidden="true"></i>
-                  <i class="fa fa-star star-rated" aria-hidden="true"></i>
+
+
+                    <div class="container" ng-app="app" ng-controller="appController">
+                        <div>
+                          <div star-rating rating="starRating3" click="click3(param)" mouse-hover="mouseHover3(param)" mouse-leave="mouseLeave3(param)"></div>
+                        </div>
+                    </div>
+
+
+
+                <!-- <div>
                   <i class="fa fa-star star-not-rated" aria-hidden="true"></i>
                   <i class="fa fa-star star-not-rated" aria-hidden="true"></i>
-                </div>
+                  <i class="fa fa-star star-not-rated" aria-hidden="true"></i>
+                  <i class="fa fa-star star-not-rated" aria-hidden="true"></i>
+                  <i class="fa fa-star star-not-rated" aria-hidden="true"></i>
+                </div> -->
               </div>
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">{{chosenMovie.title}}<i class="material-icons right">close</i></span>
