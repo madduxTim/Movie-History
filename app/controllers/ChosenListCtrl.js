@@ -16,5 +16,13 @@ app.controller('ChosenListCtrl', function($scope, $location, chosenStorage){
       });
   };
 
+  $scope.deleteMovie = function(movieId){
+    chosenStorage.deleteChosenMovie(movieId).then(function(response){
+      chosenStorage.getChosenMovieList().then(function(someCollection){
+        $scope.chosenMovies = someCollection;
+      });
+    });
+    console.log("working", movieId);
+  };
 
 });
