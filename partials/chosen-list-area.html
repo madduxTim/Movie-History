@@ -11,16 +11,13 @@
                 <img class="activator" ng-src={{chosenMovie.poster}}>
               </div>
               <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">{{chosenMovie.title}}<i class="material-icons right">more_vert</i></span>
+                <span class="card-title activator grey-text text-darken-4">{{chosenMovie.title}}</span>
                 <p class="year">{{chosenMovie.year}}</p>
-                <!-- <div class="rating">Rating: {{chosenMovie.rating}}</div> -->
-                <div>
-                  <i class="fa fa-star star-rated" aria-hidden="true"></i>
-                  <i class="fa fa-star star-rated" aria-hidden="true"></i>
-                  <i class="fa fa-star star-rated" aria-hidden="true"></i>
-                  <i class="fa fa-star star-not-rated" aria-hidden="true"></i>
-                  <i class="fa fa-star star-not-rated" aria-hidden="true"></i>
-                </div>
+                <div class="rating">
+                  <form>
+                    <label>Please rate this movie:</label>
+                    <span><input type="number" size="3" min="1" max="5"ng-model="chosenMovie.rating"/><i class="material-icons tiny right" ng-click="rankMovie(chosenMovie)">stars</i></span>
+                  </form>
               </div>
               <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">{{chosenMovie.title}}<i class="material-icons right">close</i></span>
