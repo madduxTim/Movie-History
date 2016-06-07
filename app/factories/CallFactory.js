@@ -16,7 +16,12 @@ app.factory("movieQueryStore", function($q, $http){
                 reject(error);
             });
 
-    });
-}
+        });
+    }
+
+    var plotSearchCall = function(){
+        let plotStorage
+    }
+
     return {movieSearchCall:movieSearchCall};
 }); 
