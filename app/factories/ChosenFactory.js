@@ -4,8 +4,6 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
 
   var postNewChosenMovie = function(newChosenMovie) {
 
-    console.log(newChosenMovie);
-
     let user = AuthFactory.getUser();
 
     return $q(function(resolve, reject) {
@@ -14,7 +12,7 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
           JSON.stringify({
             title: newChosenMovie.Title,
             year: newChosenMovie.Year,
-            rating: newChosenMovie.Rating,
+            rating: 0,
             poster: newChosenMovie.Poster,
             uid: user.uid
           }))
