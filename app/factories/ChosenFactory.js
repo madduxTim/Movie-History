@@ -4,16 +4,18 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
 
   var postNewChosenMovie = function(newChosenMovie) {
 
+    console.log(newChosenMovie);
+
     let user = AuthFactory.getUser();
 
     return $q(function(resolve, reject) {
       $http
         .post(firebaseURL + "movies.json",
           JSON.stringify({
-            title: newChosenMovie.title,
-            year: newChosenMovie.year,
-            rating: newChosenMovie.rating,
-            poster: newChosenMovie.poster,
+            title: newChosenMovie.Title,
+            year: newChosenMovie.Year,
+            rating: newChosenMovie.Rating,
+            poster: newChosenMovie.Poster,
             uid: user.uid
           }))
         .success(function(objectFromFirebase) {
