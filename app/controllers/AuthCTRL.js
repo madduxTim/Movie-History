@@ -3,8 +3,6 @@
 app.controller("AuthCTRL", function($scope, $rootScope, $location, firebaseURL, AuthFactory){
   let ref = new Firebase(firebaseURL);
 
-  // $scope.hasUser = false;
-
   $scope.account = {
     email: "",
     password: ""
@@ -12,7 +10,7 @@ app.controller("AuthCTRL", function($scope, $rootScope, $location, firebaseURL, 
 
 
   if($location.path() === "/logout"){
-    Materialize.toast(`Til next time ${$scope.account.email}!`, 3000, "rounded")
+    Materialize.toast("User logged out", 3000, "rounded")
     ref.unauth();
     $rootScope.isActive = false;
   }
@@ -24,7 +22,7 @@ app.controller("AuthCTRL", function($scope, $rootScope, $location, firebaseURL, 
       password: $scope.account.password
     }, (error, userData) => {
       if(error){
-        console.log(`Error creating user: ${error}`);
+        Materialize.toast(`Error creating user: ${error}`, 3000, "rounded");
       } else{
         $scope.login();
       }
@@ -36,7 +34,6 @@ app.controller("AuthCTRL", function($scope, $rootScope, $location, firebaseURL, 
     AuthFactory
       .authenticate($scope.account)
       .then(() => {
-        // $scope.hasUser = true;
         $rootScope.isActive = true;
         $location.path("/");
         $scope.$apply();
