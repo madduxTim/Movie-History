@@ -7,9 +7,8 @@
           <img class="activator" ng-src={{query.Poster}}>
         </div>
         <div class="card-content">
-          <p class="activator grey-text text-darken-4">{{query.Title}}</p>
+          <span class="activator grey-text text-darken-4">{{query.Title}}<i class="material-icons right" ng-click="addToChosenList(query)">playlist_add</i></span>
           <p class="year">{{query.Year}}</p>
-          <span><i class="material-icons right" ng-click="addToChosenList(query)">playlist_add</i></span>
           <!-- <div class="rating">Rating: {{chosenMovie.rating}}</div> -->
         </div>
         <div class="card-reveal">
