@@ -51,6 +51,8 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
 
     console.log(movieToRank.id);
     console.log(movieToRank.rating);
+    Materialize.toast("Ranking updated!", 3000, "rounded");
+
 
     let user = AuthFactory.getUser();
 
@@ -67,6 +69,7 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
           reject(error);
         });
     });
+
   };
 
 
