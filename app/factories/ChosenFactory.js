@@ -18,6 +18,7 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
           }))
         .success(function(objectFromFirebase) {
           resolve(objectFromFirebase);
+          Materialize.toast(`${newChosenMovie.Title} has been added to My Movies!`, 3000, "rounded")
         })
         .error(function(error) {
           reject(error);
@@ -48,26 +49,21 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
   };
 
   var rankChosenMovie = function(movieToRank) {
-
     Materialize.toast(`Ranking changed to ${movieToRank.rating}`, 3000, "rounded");
-
-
     let user = AuthFactory.getUser();
-
     return $q(function(resolve, reject) {
       $http
         .patch(firebaseURL + "movies/" + movieToRank.id + ".json",
           JSON.stringify({
             rating: movieToRank.rating
           }))
-        .success(function(objectFromFirebase) {
-          resolve(objectFromFirebase);
-        })
-        .error(function(error) {
-          reject(error);
-        });
-    });
-
+          .success(function(objectFromFirebase) {
+              resolve(objectFromFirebase);
+            })
+          .error(function(error) {
+            reject(error);
+          });
+      });
   };
 
 
