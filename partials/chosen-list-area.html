@@ -3,21 +3,21 @@
 <div class="row">
   <div class="col s10 offset-s1">
     <div class="card-panel searchmodal">
-        <div class="search">
+        <div class=" search">
           <div class="col s6 offset-s3 mysearch">
             <input type="text" placeholder="Start Typing to Filter Movies" ng-model="searchText">
           </div>
         </div>
-      <div class="contain"> 
-        <h4>My Movies</h4>
+    <div class="movies ng-scope">
+      <div class="contain ng-scope"> 
         <div class="row">
           <div class="col s4" ng-repeat="chosenMovie in chosenMovies | filter: searchText">
-            <div class="card mymovieheight">
+            <div class="card z-depth-0 mymovieheight">
               <div class="card-image poster waves-effect waves-block waves-light">
                 <img class="activator" ng-src={{chosenMovie.poster}} err-src="http://static1.squarespace.com/static/55fc0004e4b069a519961e2d/t/55fc06a8e4b043168701253c/1464110026374/?format=1000w">
               </div>
               <div class="card-content">
-                <span class="activator grey-text text-darken-4">{{chosenMovie.title}}
+                <span class="grey-text text-darken-4">{{chosenMovie.title}}
                   <i class="fa fa-times hover right" aria-hidden="true" ng-click="deleteMovie(chosenMovie.id, chosenMovie.title)"></i>
                 </span>
                 <p class="year">{{chosenMovie.year}}</p>
@@ -39,6 +39,7 @@
           </div>
         </div> 
       </div> 
+    </div>
     </div>
   </div>
 </div>
