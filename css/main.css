@@ -11,7 +11,8 @@ body {
 
 .searchmodal {
   background-color: #ECECEC;
-  border-radius: 5px; }
+  border-radius: 5px;
+  min-width: 1100px; }
 
 .logo {
   font-weight: 600;
@@ -29,9 +30,6 @@ body {
   border-radius: 5px;
   background-color: #ECECEC; }
 
-.card {
-  min-height: 440px; }
-
 .lightblue {
   background-color: #73AAE2; }
 
@@ -46,6 +44,26 @@ body {
 
 .star-rated {
   color: #D20000; }
+
+.cardheight {
+  height: 500px;
+  min-width: 300px; }
+
+.hover:hover {
+  color: grey;
+  cursor: pointer; }
+
+.mymovieheight {
+  height: 520px;
+  min-width: 300px; }
+
+.poster {
+  background-color: black;
+  height: 400px; }
+
+.contain {
+  width: 1000px;
+  margin: 0 auto; }
 
 .star-not-rated {
   color: #E6E6E6; }

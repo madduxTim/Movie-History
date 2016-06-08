@@ -1,5 +1,4 @@
 "use strict";
-
 app.controller("MoviesCTRL", function($scope, $location, movieQueryStore, chosenStorage){
   $scope.queryStorage = [];
 
@@ -7,6 +6,7 @@ app.controller("MoviesCTRL", function($scope, $location, movieQueryStore, chosen
     movieQueryStore.movieSearchCall()
       .then(function(queryResults){
         $scope.queryStorage = queryResults[0];
+        let imdbID = $scope.queryStorage[2].imdbID;
     });
   };
 
@@ -14,8 +14,7 @@ app.controller("MoviesCTRL", function($scope, $location, movieQueryStore, chosen
   $scope.addToChosenList = function(newChosenMovie){
     chosenStorage.postNewChosenMovie(newChosenMovie)
       .then(function successCallback(response) {
-        $location.url("/list");
-        Materialize.toast("Movie Added!", 3000, "rounded");
+        Materialize.toast('Added to "My Movies"', 3000, "rounded");
       });
   };
 

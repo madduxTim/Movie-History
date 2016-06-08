@@ -1,41 +1,48 @@
 <div class="row">
-<div class="col s10 offset-s1">
-  <div class="card-panel searchmodal">
-      <div class="search">
-        <div class="col s5 offset-s3">
-          <input type="text" placeholder="Start Typing to Filter Movies" ng-model="searchText">
-<!--           <button class="btn-flat right waves-effect waves-light" type="submit" name="action" ng-click="btnWorking()">Filter My Movies
-            <i class="material-icons right">search</i>
-          </button> -->
+
+  <div class="col s10 offset-s1">
+    <div class="card-panel searchmodal">
+        <div class="search">
+          <div class="col s5 offset-s3">
+            <input type="text" placeholder="Start Typing to Filter Movies" ng-model="searchText">
+  <!--           <button class="btn-flat right waves-effect waves-light" type="submit" name="action" ng-click="btnWorking()">Filter My Movies
+              <i class="material-icons right">search</i>
+            </button> -->
+          </div>
         </div>
-      </div>
-    <div class="container"> 
-      <h4>My Movies</h4>
-      <div class="row" >
-        <div class="col s4" ng-repeat="chosenMovie in chosenMovies | filter: searchText">
-          <div class="card">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" ng-src={{chosenMovie.poster}}>
-            </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">{{chosenMovie.title}}</span>
-                <p class="year">{{chosenMovie.year}}</p>
-                <div class="rating">
-                  <form>
-                    <label>Please rate this movie:</label>
-                    <span><input type="number" size="3" min="1" max="5"ng-model="chosenMovie.rating"/><i class="material-icons tiny teal-text right hoverable" ng-click="rankMovie(chosenMovie)">stars</i></span>
-                    <i class="material-icons tiny teal-text right hoverable" ng-click="deleteMovie(chosenMovie.id, chosenMovie.title)">delete</i>
-                  </form>
+      <div class="container">
+        <h4>My Movies</h4>
+        <div class="row" >
+          <div class="col s4" ng-repeat="chosenMovie in chosenMovies | filter: searchText">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" ng-src={{chosenMovie.poster}}>
               </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">{{chosenMovie.title}}<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                <div class="card-content">
+                  <span class="activator grey-text text-darken-4">{{chosenMovie.title}}
+                    <i class="fa fa-times hover right" aria-hidden="true" ng-click="deleteMovie(chosenMovie.id, chosenMovie.title)"></i>
+                  </span>
+                  <p class="year">{{chosenMovie.year}}</p>
+                      <div  ng-app="app" ng-controller="appController">
+                          <div star-rating rating="starRating3" click="click3(param)" mouse-hover="mouseHover3(param)" mouse-leave="mouseLeave3(param)"></div>
+                      </div>
+  <!--            <div class="rating">
+                    <form>
+                      <label>Please rate this movie:</label>
+                      <span><input type="number" size="3" min="1" max="5"ng-model="chosenMovie.rating"/><i class="material-icons tiny teal-text right hoverable" ng-click="rankMovie(chosenMovie)">stars</i></span>
+                      <i class="material-icons tiny teal-text right hoverable" ng-click="deleteMovie(chosenMovie.id, chosenMovie.title)">delete</i>
+                    </form>
+                  </div> -->
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">{{chosenMovie.title}}<i class="material-icons right">close</i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div> 
-      </div> 
+        </div>
+      </div>
     </div>
   </div>
 </div>
-</div>
+
