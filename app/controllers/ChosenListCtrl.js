@@ -16,6 +16,14 @@ app.controller('ChosenListCtrl', function($scope, $location, chosenStorage){
       });
   };
 
+  $scope.deleteMovie = function(movieId, movieTitle){
+    chosenStorage.deleteChosenMovie(movieId).then(function(response){
+      chosenStorage.getChosenMovieList().then(function(someCollection){
+        $scope.chosenMovies = someCollection;
+        Materialize.toast(`${movieTitle} removed from your list`, 3000, "rounded");
+      });
+    });
+  };
 
   $scope.deleteMovie = function(movieId, movieTitle){
     chosenStorage.deleteChosenMovie(movieId).then(function(response){

@@ -84,7 +84,6 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
     });
   };
 
-
   return {deleteChosenMovie:deleteChosenMovie, postNewChosenMovie:postNewChosenMovie, getChosenMovieList:getChosenMovieList, rankChosenMovie:rankChosenMovie };
 
 });
