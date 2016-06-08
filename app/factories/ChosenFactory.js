@@ -47,18 +47,18 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
     });
   };
 
-  var rankChosenMovie = function(movieToRank) {
+  var rankChosenMovie = function(movieId, param) {
 
-    Materialize.toast(`Ranking changed to ${movieToRank.rating}`, 3000, "rounded");
+    Materialize.toast(`Ranking changed to ${param}`, 3000, "rounded");
 
 
     let user = AuthFactory.getUser();
 
     return $q(function(resolve, reject) {
       $http
-        .patch(firebaseURL + "movies/" + movieToRank.id + ".json",
+        .patch(firebaseURL + "movies/" + movieId + ".json",
           JSON.stringify({
-            rating: movieToRank.rating
+            rating: param
           }))
         .success(function(objectFromFirebase) {
           resolve(objectFromFirebase);
