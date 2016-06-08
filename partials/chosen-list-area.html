@@ -8,7 +8,7 @@
             <input type="text" placeholder="Start Typing to Filter Movies" ng-model="searchText">
           </div>
         </div>
-      <div class="contain"> 
+      <div class="contain">
         <h4>My Movies</h4>
         <div class="row">
           <div class="col s4" ng-repeat="chosenMovie in chosenMovies | filter: searchText">
@@ -21,24 +21,17 @@
                   <i class="fa fa-times hover right" aria-hidden="true" ng-click="deleteMovie(chosenMovie.id, chosenMovie.title)"></i>
                 </span>
                 <p class="year">{{chosenMovie.year}}</p>
-                    <div  ng-app="app" ng-controller="appController">
-                        <div star-rating rating="starRating3" click="click3(param)" mouse-hover="mouseHover3(param)" mouse-leave="mouseLeave3(param)"></div>
-                    </div>
-<!--            <div class="rating">
-                  <form>
-                    <label>Please rate this movie:</label>
-                    <span><input type="number" size="3" min="1" max="5"ng-model="chosenMovie.rating"/><i class="material-icons tiny teal-text right hoverable" ng-click="rankMovie(chosenMovie)">stars</i></span>
-                    <i class="material-icons tiny teal-text right hoverable" ng-click="deleteMovie(chosenMovie.id, chosenMovie.title)">delete</i>
-                  </form>
-                </div> -->
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">{{chosenMovie.title}}<i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-              </div>
+                <div>
+                  <div star-rating rating="chosenMovie.rating" movie="chosenMovie.id" read-only="false" max-rating="5" click="click1(param)" mouse-hover="mouseHover1(param)" mouse-leave="mouseLeave3(param)"></div>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">{{chosenMovie.title}}<i class="material-icons right">close</i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
             </div>
           </div>
-        </div> 
-      </div> 
+        </div>
+      </div>
     </div>
   </div>
 </div>
