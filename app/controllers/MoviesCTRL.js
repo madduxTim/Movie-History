@@ -6,7 +6,7 @@ app.controller("MoviesCTRL", function($scope, $location, movieQueryStore, chosen
     movieQueryStore.movieSearchCall()
       .then(function(queryResults){
         $scope.queryStorage = queryResults[0];
-                let imdbID = $scope.queryStorage[2].imdbID;
+        let imdbID = $scope.queryStorage[2].imdbID;
     });
   },
 
