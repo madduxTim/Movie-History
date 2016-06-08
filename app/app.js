@@ -78,52 +78,12 @@ app.directive('errSrc', function() {
 
 
 app.controller('appController', ['$scope', function ($scope) {
-    $scope.starRating1 = 4;
-    $scope.starRating2 = 5;
-    $scope.starRating3 = 2;
-    $scope.hoverRating1 = $scope.hoverRating2 = $scope.hoverRating3 = 0;
+    $scope.starRating3 = 0;
 
-    $scope.click1 = function (param) {
+    $scope.click3 = function (param) {
         console.log('Click(' + param + ')');
     };
 
-    $scope.mouseHover1 = function (param) {
-        console.log('mouseHover(' + param + ')');
-        $scope.hoverRating1 = param;
-    };
-
-    $scope.mouseLeave1 = function (param) {
-        console.log('mouseLeave(' + param + ')');
-        $scope.hoverRating1 = param + '*';
-    };
-
-    $scope.click2 = function (param) {
-        console.log('Click');
-    };
-
-    $scope.mouseHover2 = function (param) {
-        console.log('mouseHover(' + param + ')');
-        $scope.hoverRating1 = param;
-    };
-
-    $scope.mouseLeave2 = function (param) {
-        console.log('mouseLeave(' + param + ')');
-        $scope.hoverRating2 = param + '*';
-    };
-
-    $scope.click3 = function (param) {
-        console.log('Click');
-    };
-
-    $scope.mouseHover3 = function (param) {
-        console.log('mouseHover(' + param + ')');
-        $scope.hoverRating3 = param;
-    };
-
-    $scope.mouseLeave3 = function (param) {
-        console.log('mouseLeave(' + param + ')');
-        $scope.hoverRating3 = param + '*';
-    };
 }]);
 
 app.directive('starRating', function () {
@@ -149,44 +109,44 @@ app.directive('starRating', function () {
                 attrs.maxRating = '5';
             };
         },
-        controller: function ($scope, $element, $attrs) {
-            $scope.maxRatings = [];
+      controller: function ($scope, $element, $attrs) {
+          $scope.maxRatings = [];
 
-            for (var i = 1; i <= $scope.maxRating; i++) {
-                $scope.maxRatings.push({});
-            };
+          for (var i = 1; i <= $scope.maxRating; i++) {
+              $scope.maxRatings.push({});
+          };
 
-            $scope._rating = $scope.rating;
-      
-      $scope.isolatedClick = function (param) {
-        if ($scope.readOnly == 'true') return;
+          $scope._rating = $scope.rating;
+    
+        $scope.isolatedClick = function (param) {
+          if ($scope.readOnly == 'true') return;
 
-        $scope.rating = $scope._rating = param;
-        $scope.hoverValue = 0;
-        $scope.click({
-          param: param
-        });
-      };
+          $scope.rating = $scope._rating = param;
+          $scope.hoverValue = 0;
+          $scope.click({
+            param: param
+          });
+        };
 
-      $scope.isolatedMouseHover = function (param) {
-        if ($scope.readOnly == 'true') return;
+        $scope.isolatedMouseHover = function (param) {
+          if ($scope.readOnly == 'true') return;
 
-        $scope._rating = 0;
-        $scope.hoverValue = param;
-        $scope.mouseHover({
-          param: param
-        });
-      };
+          $scope._rating = 0;
+          $scope.hoverValue = param;
+          $scope.mouseHover({
+            param: param
+          });
+        };
 
-      $scope.isolatedMouseLeave = function (param) {
-        if ($scope.readOnly == 'true') return;
+        $scope.isolatedMouseLeave = function (param) {
+          if ($scope.readOnly == 'true') return;
 
-        $scope._rating = $scope.rating;
-        $scope.hoverValue = 0;
-        $scope.mouseLeave({
-          param: param
-        });
-      };
-        }
+          $scope._rating = $scope.rating;
+          $scope.hoverValue = 0;
+          $scope.mouseLeave({
+            param: param
+          });
+        };
+      }
     };
 });

@@ -10,10 +10,10 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
       $http
         .post(firebaseURL + "movies.json",
           JSON.stringify({
-            title: newChosenMovie.title,
-            year: newChosenMovie.year,
-            rating: newChosenMovie.rating,
-            poster: newChosenMovie.poster,
+            title: newChosenMovie.Title,
+            year: newChosenMovie.Year,
+            rating: 0,
+            poster: newChosenMovie.Poster,
             uid: user.uid
           }))
         .success(function(objectFromFirebase) {
@@ -47,7 +47,47 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
     });
   };
 
-  return {postNewChosenMovie:postNewChosenMovie, getChosenMovieList:getChosenMovieList };
+  var rankChosenMovie = function(movieToRank) {
+
+    console.log(movieToRank.id);
+    console.log(movieToRank.rating);
+    Materialize.toast("Ranking updated!", 3000, "rounded");
+
+
+    let user = AuthFactory.getUser();
+
+    return $q(function(resolve, reject) {
+      $http
+        .patch(firebaseURL + "movies/" + movieToRank.id + ".json",
+          JSON.stringify({
+            rating: movieToRank.rating
+          }))
+        .success(function(objectFromFirebase) {
+          resolve(objectFromFirebase);
+        })
+        .error(function(error) {
+          reject(error);
+        });
+    });
+
+  };
+
+
+  // var deleteChosenMovie = function(chosenMovieId){
+  //   return $q(function(resolve, reject){
+  //     $http
+  //       .delete(firebaseURL + "movies/" + chosenMovieId + ".json")
+  //       .success(function(objectFromFirebase){
+  //         resolve(objectFromFirebase);
+  //       })
+  //       .error(function(error){
+  //         reject(error);
+  //     });
+  //   });
+  // };
+
+
+  return {postNewChosenMovie:postNewChosenMovie, getChosenMovieList:getChosenMovieList, rankChosenMovie:rankChosenMovie };
 
 });
 

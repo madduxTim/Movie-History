@@ -1,17 +1,24 @@
 "use strict";
-app.controller("MoviesCTRL", function($scope, movieQueryStore){
-    
-    $scope.searchOMDB = () => {
-        $scope.queryStorage = [];
-        movieQueryStore.movieSearchCall()
-            .then(function(queryResults){
-                $scope.queryStorage = queryResults[0];
-                let imdbID = $scope.queryStorage[2].imdbID;
-                console.log("imdbID", imdbID);
-        });
-    },
+app.controller("MoviesCTRL", function($scope, $location, movieQueryStore, chosenStorage){
 
-    $scope.addToWatchList = () => {
-        console.log("working");
-    }
+  $scope.searchOMDB = () => {
+    $scope.queryStorage = [];
+    movieQueryStore.movieSearchCall()
+      .then(function(queryResults){
+        $scope.queryStorage = queryResults[0];
+                let imdbID = $scope.queryStorage[2].imdbID;
+    });
+  },
+
+
+  $scope.addToChosenList = function(newChosenMovie){
+
+    chosenStorage.postNewChosenMovie(newChosenMovie)
+      .then(function successCallback(response) {
+        $location.url("/list");
+        Materialize.toast("Movie Added!", 3000, "rounded");
+      });
+  };
+
+
 });
