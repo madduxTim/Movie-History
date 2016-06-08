@@ -49,9 +49,7 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
 
   var rankChosenMovie = function(movieToRank) {
 
-    console.log(movieToRank.id);
-    console.log(movieToRank.rating);
-    Materialize.toast("Ranking updated!", 3000, "rounded");
+    Materialize.toast(`Ranking changed to ${movieToRank.rating}`, 3000, "rounded");
 
 
     let user = AuthFactory.getUser();
@@ -73,21 +71,21 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
   };
 
 
-  // var deleteChosenMovie = function(chosenMovieId){
-  //   return $q(function(resolve, reject){
-  //     $http
-  //       .delete(firebaseURL + "movies/" + chosenMovieId + ".json")
-  //       .success(function(objectFromFirebase){
-  //         resolve(objectFromFirebase);
-  //       })
-  //       .error(function(error){
-  //         reject(error);
-  //     });
-  //   });
-  // };
+  var deleteChosenMovie = function(chosenMovieId){
+    return $q(function(resolve, reject){
+      $http
+        .delete(firebaseURL + `/movies/${chosenMovieId}.json`)
+        .success(function(objectFromFirebase){
+          resolve(objectFromFirebase);
+        })
+        .error(function(error){
+          reject(error);
+      });
+    });
+  };
 
 
-  return {postNewChosenMovie:postNewChosenMovie, getChosenMovieList:getChosenMovieList, rankChosenMovie:rankChosenMovie };
+  return {deleteChosenMovie:deleteChosenMovie, postNewChosenMovie:postNewChosenMovie, getChosenMovieList:getChosenMovieList, rankChosenMovie:rankChosenMovie };
 
 });
 
