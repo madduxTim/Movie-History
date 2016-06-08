@@ -1,5 +1,6 @@
 body {
-  background-color: #000000; }
+  background-color: #000000;
+  overflow: hidden; }
 
 .loginbg {
   background: url(https://www.punchbowl.com/gridfs/fs/4db1dcafec8d837cee000282-1303502001) no-repeat center center fixed;
@@ -9,10 +10,13 @@ body {
 .header {
   height: 75px; }
 
+.main {
+  overflow: auto; }
+
 .searchmodal {
   background-color: #ECECEC;
   border-radius: 5px;
-  min-width: 1100px; }
+  overflow: auto; }
 
 .logo {
   font-weight: 600;
@@ -28,7 +32,8 @@ body {
 
 .card_border_radius {
   border-radius: 5px;
-  background-color: #F6F6F6; }
+  background-color: #F6F6F6;
+  width: 500px; }
 
 .lightblue {
   background-color: #73AAE2; }
@@ -66,7 +71,12 @@ body {
 
 .contain {
   width: 1000px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: auto;
+  height: 700px;
+  overflow: auto;
+  overflow-x: auto;
+  padding-right: 17px; }
 
 .star-not-rated {
   color: #E6E6E6; }
