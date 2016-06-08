@@ -12,15 +12,15 @@ app.controller('ChosenListCtrl', ['$scope', '$location', 'chosenStorage', functi
     $scope.chosenMovies = someCollection;
   });
 
-  $scope.rankMovie = function(movieToRank){
+  // $scope.rankMovie = function(movieToRank){
 
-    return movieToRank;
+  //   return movieToRank;
 
-    // chosenStorage.rankChosenMovie(movieToRank, rating)
-    //   .then(function successCallback(response) {
-    //     $location.url("/list");
-    //   });
-  };
+  //   // chosenStorage.rankChosenMovie(movieToRank, rating)
+  //   //   .then(function successCallback(response) {
+  //   //     $location.url("/list");
+  //   //   });
+  // };
 
   $scope.deleteMovie = function(movieId, movieTitle){
     chosenStorage.deleteChosenMovie(movieId).then(function(response){
