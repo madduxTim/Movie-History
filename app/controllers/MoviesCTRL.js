@@ -15,8 +15,7 @@ app.controller("MoviesCTRL", function($scope, $location, movieQueryStore, chosen
 
     chosenStorage.postNewChosenMovie(newChosenMovie)
       .then(function successCallback(response) {
-        $location.url("/list");
-        Materialize.toast("Movie Added!", 3000, "rounded");
+        Materialize.toast('Added to "My Movies"', 3000, "rounded");
       });
   };
 
