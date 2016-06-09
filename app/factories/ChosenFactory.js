@@ -10,7 +10,8 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
       $http
         .post(firebaseURL + "movies.json",
           JSON.stringify({
-            imdbID: newChosenMovie.imdbID,
+
+            imdbid: newChosenMovie.imdbID,
             title: newChosenMovie.Title,
             year: newChosenMovie.Year,
             rating: 0,
