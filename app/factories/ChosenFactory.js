@@ -19,7 +19,6 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
           }))
         .success(function(objectFromFirebase) {
           resolve(objectFromFirebase);
-          console.log(newChosenMovie);
         })
         .error(function(error) {
           reject(error);
