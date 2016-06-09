@@ -25,6 +25,10 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
     });
   };
 
+  var filterWatchedMovies = function() {
+    
+  }
+
   var getChosenMovieList = function() {
 
     let chosenMovies = [];

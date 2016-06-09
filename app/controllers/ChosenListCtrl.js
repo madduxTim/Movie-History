@@ -24,6 +24,7 @@ app.controller('ChosenListCtrl', ['$scope', '$location', 'chosenStorage', functi
     });
   };
 
+
   $scope.click1 = function(param) {
 
   };
