@@ -53,12 +53,12 @@ body {
 .star-rated {
   color: #D20000; }
 
-.icons {
-  padding-top: 20px; }
-
 .cardheight {
   height: 500px;
   min-width: 300px; }
+
+.icons {
+  padding-top: 20px; }
 
 .hover {
   color: grey; }
@@ -68,7 +68,8 @@ body {
   cursor: pointer; }
 
 .movies {
-  margin-top: 5px; }
+  overflow: auto;
+  z-index: 0; }
 
 .mymovieheight {
   height: 520px;

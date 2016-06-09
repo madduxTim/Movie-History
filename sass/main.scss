@@ -1,6 +1,13 @@
 $dark: #596160;
 $red: #D20000;
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
 body {
     background-color: #000000;
     overflow: hidden;
@@ -70,14 +77,15 @@ body {
   color: $red;
 }
 
-.icons {
-  padding-top: 20px;
-}
-
 .cardheight {
   height: 500px;
   min-width: 300px;
 }
+
+.icons {
+  padding-top: 20px;
+}
+
 
 .hover {
   color: grey;
@@ -89,7 +97,8 @@ body {
 }
 
 .movies {
-  margin-top: 5px;
+  overflow: auto;
+  z-index: 0;
 }
 
 .mymovieheight {
