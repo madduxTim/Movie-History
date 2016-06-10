@@ -14,6 +14,7 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
             imdbid: newChosenMovie.imdbID,
             title: newChosenMovie.Title,
             year: newChosenMovie.Year,
+            imdbID: newChosenMovie.imdbID,
             rating: 0,
             poster: newChosenMovie.Poster,
             uid: user.uid
@@ -26,6 +27,7 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
         });
     });
   };
+
 
   var getChosenMovieList = function() {
 
