@@ -18,10 +18,10 @@ app.controller('ChosenListCtrl', ['$scope', '$location', 'chosenStorage', functi
       chosenStorage.getChosenMovieList().then(function(someCollection){
         $scope.chosenMovies = someCollection;
         Materialize.toast(`${movieTitle} removed from your list`, 3000, "rounded");
+
       });
     });
   };
-
 
   $scope.click1 = function(param) {
 
@@ -84,7 +84,6 @@ app.directive('starRating', function ($location, chosenStorage) {
 
           chosenStorage.rankChosenMovie($scope._movie, $scope._rating)
             .then(function successCallback(response) {
-              $location.url("/list");
             });
 
         };
