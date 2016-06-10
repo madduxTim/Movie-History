@@ -4,7 +4,7 @@
     <div class="col s4" ng-repeat="query in queryStorage">
       <div class="card  z-depth-0 cardheight" >
         <div class="card-image poster waves-effect waves-block waves-light">
-          <img class="activator" ng-src={{query.Poster}}  err-src="http://static1.squarespace.com/static/55fc0004e4b069a519961e2d/t/55fc06a8e4b043168701253c/1464110026374/?format=1000w">
+          <img class="activator" ng-src={{query.Poster}}  err-src="http://static.wixstatic.com/media/fc5d35_737afeab558349559dcab15bd2ba88f5.jpg_256">
         </div>
         <div class="card-content">
           <span class="grey-text text-darken-4">{{query.Title}}<i class="material-icons right hover" ng-click="addToChosenList(query)">playlist_add</i></span>
@@ -12,7 +12,7 @@
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">{{query.Title}}<i class="material-icons right">close</i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          <p>{{query.Plot}}</p>
         </div>
       </div>
     </div>

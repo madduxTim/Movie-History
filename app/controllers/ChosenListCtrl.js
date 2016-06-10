@@ -87,7 +87,6 @@ app.directive('starRating', function ($location, chosenStorage) {
 
           chosenStorage.rankChosenMovie($scope._movie, $scope._rating)
             .then(function successCallback(response) {
-              $location.url("/list");
             });
 
         };

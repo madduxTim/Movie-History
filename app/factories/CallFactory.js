@@ -23,7 +23,7 @@ app.factory("movieQueryStore", function($q, $http){
     }
 
     var plotSearchCall = function(){
-        let plotStorage
+        let plot
     }
 
     return {movieSearchCall:movieSearchCall};

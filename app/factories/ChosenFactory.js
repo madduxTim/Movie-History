@@ -12,6 +12,7 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
           JSON.stringify({
             title: newChosenMovie.Title,
             year: newChosenMovie.Year,
+            imdbID: newChosenMovie.imdbID,
             rating: 0,
             poster: newChosenMovie.Poster,
             uid: user.uid
@@ -25,9 +26,6 @@ app.factory("chosenStorage", function($q, $http, firebaseURL, AuthFactory) {
     });
   };
 
-  var filterWatchedMovies = function() {
-    
-  }
 
   var getChosenMovieList = function() {
 
