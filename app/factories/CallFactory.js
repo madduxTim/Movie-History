@@ -10,20 +10,17 @@ app.factory("movieQueryStore", function($q, $http){
                     Object.keys(preKeyData).forEach(function(key){
                         queryStorage.push(preKeyData[key]);
                     });
-                    resolve(queryStorage);
-                    if (queryStorage[0] === "False") {
+                    if (queryStorage[0] !== "False") {
+                        resolve(queryStorage);
+                    } else {
                         Materialize.toast(queryStorage[1], 3000, "rounded")
                     }
                 })
-            .error(function(error){
+                .error(function(error){
                 reject(error);
             });
 
         });
-    }
-
-    var plotSearchCall = function(){
-        let plot
     }
 
     return {movieSearchCall:movieSearchCall};
