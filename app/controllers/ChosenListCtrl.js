@@ -13,7 +13,6 @@ app.controller('ChosenListCtrl', ['$scope', '$location', 'chosenStorage', functi
   });
 
 
-
   $scope.deleteMovie = function(movieId, movieTitle){
     chosenStorage.deleteChosenMovie(movieId).then(function(response){
       chosenStorage.getChosenMovieList().then(function(someCollection){
@@ -25,17 +24,22 @@ app.controller('ChosenListCtrl', ['$scope', '$location', 'chosenStorage', functi
   };
 
 
+  if($location.path() === "/watched"){
+    $scope.watched = true;
+  }
+
+
   $scope.click1 = function(param) {
 
   };
 
   $scope.mouseHover1 = function(param) {
-    //console.log('mouseHover(' + param + ')');
+
     $scope.hoverRating1 = param;
   };
 
   $scope.mouseLeave1 = function(param) {
-    //console.log('mouseLeave(' + param + ')');
+
     $scope.hoverRating1 = param + '*';
   };
 
@@ -77,7 +81,6 @@ app.directive('starRating', function ($location, chosenStorage) {
           $scope._movie = $scope.movie;
 
         $scope.isolatedClick = function (param) {
-          //console.log($scope._movie);
 
           $scope.rating = $scope._rating = param;
           $scope.hoverValue = 0;

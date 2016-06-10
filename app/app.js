@@ -26,6 +26,16 @@ app.config(function($routeProvider){
             controller: "ChosenListCtrl",
             resolve: {isAuth}
         }).
+        when("/unwatched", {
+            templateUrl: "partials/my-unwatched-movies.html",
+            controller: "ChosenListCtrl",
+            resolve: {isAuth}
+        }).
+        when("/watched", {
+            templateUrl: "partials/my-watched-movies.html",
+            controller: "ChosenListCtrl",
+            resolve: {isAuth}
+        }).
         when("/login", {
             templateUrl: "partials/login.html",
             controller: "AuthCTRL",
