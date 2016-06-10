@@ -1,15 +1,12 @@
 <div class="row">
   <div class="col s10 offset-s1">
-    <div class="card-panel searchmodal">
-        <div class="search">
-          <div class="col s6 offset-s3 mysearch">
-            <input type="text" placeholder="Start Typing to Filter Movies" ng-model="searchText">
-          </div>
-        </div>
+    <div class="card-panel">
       <div class="contain">
-        <h4>My Movie Collection</h4>
+        <h4>Already Watched Movies</h4>
         <div class="row">
-          <div class="col s4" ng-repeat="chosenMovie in chosenMovies | filter:searchText | orderBy:'title' ">
+          <p ng-hide="chosenMovies.length">You should add some movies!</p>
+          <div class="col s4" ng-repeat="chosenMovie in chosenMovies | filter:{rating:'!0'} |orderBy:'-rating' ">
+
             <div class="card mymovieheight">
               <div class="card-image poster waves-effect waves-block waves-light">
                 <img class="activator" ng-src={{chosenMovie.poster}} err-src="http://static1.squarespace.com/static/55fc0004e4b069a519961e2d/t/55fc06a8e4b043168701253c/1464110026374/?format=1000w">

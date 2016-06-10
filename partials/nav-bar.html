@@ -2,7 +2,8 @@
   <a class="logo">GroovyMoovy</a>
     <ul class="right">
       <li ng-show="isActive"><a href="#/search">Search</a></li>
-      <li ng-show="isActive"><a href="/#/">My Movies</a></li>
+      <li ng-show="isActive"><a href="/#/watched">My Watched Movies</a></li>
+      <li ng-show="isActive"><a href="/#/unwatched">My UNWatched Movies</a></li>      
       <li ng-show="isActive"><a ng-href="#/logout">Logout</a></li>
     </ul>
 </nav>
@@ -10,9 +11,10 @@
 
   <!-- Dropdown Trigger -->
 
+
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">Rated Movies</a></li>
+    <li><a href="/#/watched">Rated Movies</a></li>
     <li class="divider"></li>
-    <li><a href="#!">Unwatched Movies</a></li>
+    <li><a href="/#/unwatched">Unwatched Movies</a></li>
   </ul>
