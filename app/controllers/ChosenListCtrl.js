@@ -23,12 +23,6 @@ app.controller('ChosenListCtrl', ['$scope', '$location', 'chosenStorage', functi
     });
   };
 
-
-  if($location.path() === "/watched"){
-    $scope.watched = true;
-  }
-
-
   $scope.click1 = function(param) {
 
   };
