@@ -16,9 +16,9 @@ Complete project specs and requirements are available [here](https://github.com/
 
 ![Screenshot 1: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/Login-Register.png)
 
-![Screenshot 2: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/MovieCollection.png)
+![Screenshot 2: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/MyMovieCollection.png)
 
-![Screenshot 3: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/AlreadyWatched.png)
+![Screenshot 3: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/AlreadyWatchedMovies.png)
 
 ![Screenshot 4: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/UnwatchedMovies.png)
 
