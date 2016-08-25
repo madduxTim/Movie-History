@@ -14,7 +14,17 @@ Complete project specs and requirements are available [here](https://github.com/
 
 #### Screenshots
 
-&nbsp;&nbsp;_To be added upon completion of final version_
+![Screenshot 1: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/Login-Register.png)
+
+![Screenshot 2: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/MovieCollection.png)
+
+![Screenshot 3: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/AlreadyWatched.png)
+
+![Screenshot 4: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/UnwatchedMovies.png)
+
+![Screenshot 5: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/AddSomeMovies.png)
+
+![Screenshot 6: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/SearchResults.png)
 
 
 #### Technologies
