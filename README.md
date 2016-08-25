@@ -12,21 +12,6 @@ Complete project specs and requirements are available [here](https://github.com/
   * Open a second terminal and type `http-server`
 
 
-#### Screenshots
-
-![Screenshot 1: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/Login-Register.png)
-
-![Screenshot 2: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/MovieCollection.png)
-
-![Screenshot 3: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/AlreadyWatched.png)
-
-![Screenshot 4: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/UnwatchedMovies.png)
-
-![Screenshot 5: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/AddSomeMovies.png)
-
-![Screenshot 6: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/SearchResults.png)
-
-
 #### Technologies
   * Angular (AngularJS, Angular-Route, AngularFire)
   * Bower & NPM
@@ -46,3 +31,20 @@ Complete project specs and requirements are available [here](https://github.com/
 &nbsp;&nbsp;[Tim Maddux](https://github.com/madduxTim)  
 &nbsp;&nbsp;[Chris Barrett](https://github.com/csbarrett1)  
 &nbsp;&nbsp;[Katye Russell](https://github.com/complikatyed)  
+
+
+#### Screenshots
+
+![Screenshot 1: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/Login-Register.png)
+
+![Screenshot 2: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/MyMovieCollection.png)
+
+![Screenshot 3: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/AlreadyWatchedMovies.png)
+
+![Screenshot 4: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/UnwatchedMovies.png)
+
+![Screenshot 5: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/AddSomeMovies.png)
+
+![Screenshot 6: No selection](https://github.com/madduxTim/Movie-History/blob/master/img/SearchResults.png)
+
+
